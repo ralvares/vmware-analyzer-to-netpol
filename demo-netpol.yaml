@@ -196,24 +196,15 @@ spec:
     matchLabels:
       app: dns-in
   policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: dns-in
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: dns-in
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  - Egress
+  ingress: []
+  egress:
+  - ports:
+    - port: "53"
+      protocol: TCP
+  - ports:
+    - port: "53"
+      protocol: UDP
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -226,9 +217,12 @@ spec:
     matchLabels:
       app: dns-in-tcp
   policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  - Egress
+  ingress: []
+  egress:
+  - ports:
+    - port: "53"
+      protocol: TCP
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -241,9 +235,12 @@ spec:
     matchLabels:
       app: dns-in-udp
   policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  - Egress
+  ingress: []
+  egress:
+  - ports:
+    - port: "53"
+      protocol: UDP
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -295,37 +292,9 @@ spec:
   - ports:
     - port: "22024"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: data-recovery-appliance
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: data-recovery-appliance
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "902"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: data-recovery-appliance
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: data-recovery-appliance
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
@@ -639,20 +608,6 @@ spec:
   - ports:
     - port: "57348"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: heartbeat
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: heartbeat
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "52267"
       protocol: TCP
@@ -684,25 +639,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-all
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: icmp-all
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: icmp-all
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -714,10 +652,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-destination-unreachable
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -729,10 +665,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-echo-reply
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -744,10 +678,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-echo-request
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -759,10 +691,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-redirect
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -774,10 +704,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-router-advertisement
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -789,10 +717,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-router-solicitation
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -804,10 +730,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-source-quench
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -819,10 +743,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmp-time-exceeded
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -834,10 +756,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmpv4-all
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -849,10 +769,8 @@ spec:
   podSelector:
     matchLabels:
       app: icmpv6-all
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -864,10 +782,8 @@ spec:
   podSelector:
     matchLabels:
       app: igmp-leave-group
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -879,10 +795,8 @@ spec:
   podSelector:
     matchLabels:
       app: igmp-membership-query
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -894,10 +808,8 @@ spec:
   podSelector:
     matchLabels:
       app: igmp-v2-membership-report
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -909,10 +821,8 @@ spec:
   podSelector:
     matchLabels:
       app: igmp-v3-membership-report
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -992,10 +902,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-destination-unreachable
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1007,10 +915,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-echo-reply
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1022,10 +928,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-echo-request
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1037,10 +941,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-multicast-listener-done
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1052,10 +954,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-multicast-listener-query
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1067,10 +967,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-multicast-listener-report
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1082,10 +980,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-neighbor-advertisement
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1097,10 +993,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-neighbor-solicitation
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1112,10 +1006,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-packet-too-big
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1127,10 +1019,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-parameter-problem
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1142,10 +1032,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-time-exceeded
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1157,10 +1045,8 @@ spec:
   podSelector:
     matchLabels:
       app: ipv6-icmp-version-2-multicast-listener
-  policyTypes:
-  - Ingress
-  ingress:
-  - ports: []
+  policyTypes: []
+  ingress: []
 
 ---
 apiVersion: networking.k8s.io/v1
@@ -1416,105 +1302,21 @@ spec:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-client-access-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-client-access-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "143"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-client-access-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-client-access-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-client-access-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-client-access-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "995"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-client-access-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-client-access-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "110"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-client-access-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-client-access-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "993"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-client-access-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-client-access-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5060"
       protocol: TCP
@@ -1539,173 +1341,33 @@ spec:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
@@ -1726,207 +1388,39 @@ spec:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "587"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "50636"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "50389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
@@ -1947,54 +1441,12 @@ spec:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-unified-messaging-centre
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-unified-messaging-centre
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-unified-messaging-centre
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-unified-messaging-centre
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-unified-messaging-centre
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-unified-messaging-centre
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5060"
       protocol: TCP
@@ -2002,20 +1454,6 @@ spec:
       protocol: TCP
     - port: "5062"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2007-unified-messaging-centre
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2007-unified-messaging-centre
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
@@ -2036,139 +1474,27 @@ spec:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "143"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "993"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5060"
       protocol: TCP
@@ -2176,105 +1502,21 @@ spec:
       protocol: TCP
     - port: "5062"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "110"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "995"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-client-access-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-client-access-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
@@ -2295,173 +1537,33 @@ spec:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "64327"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "808"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5075"
       protocol: TCP
@@ -2469,20 +1571,6 @@ spec:
       protocol: TCP
     - port: "5077"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-mailbox-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-mailbox-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
@@ -2503,190 +1591,36 @@ spec:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "587"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "50636"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-transport-servers
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-transport-servers
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
@@ -2707,54 +1641,12 @@ spec:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5060"
       protocol: TCP
@@ -2768,105 +1660,21 @@ spec:
       protocol: TCP
     - port: "5068"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5075"
       protocol: TCP
@@ -2874,54 +1682,12 @@ spec:
       protocol: TCP
     - port: "5077"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: ms-exchange-2010-unified-messaging-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: ms-exchange-2010-unified-messaging-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
@@ -3181,20 +1947,6 @@ spec:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-reporting-services
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-reporting-services
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
@@ -3215,54 +1967,12 @@ spec:
   - ports:
     - port: "2382"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-analysis-services
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-analysis-services
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2383"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-analysis-services
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-analysis-services
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-analysis-services
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-analysis-services
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
@@ -3283,88 +1993,18 @@ spec:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-database-engine
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-database-engine
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-database-engine
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-database-engine
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1434"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-database-engine
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-database-engine
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-database-engine
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-database-engine
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1434"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: mssql-server-database-engine
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: mssql-server-database-engine
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
@@ -3419,462 +2059,84 @@ spec:
   - ports:
     - port: "138"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: 49152-65535
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: 1025-65535
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3269"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "464"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "464"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "123"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: 1025-65535
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "636"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "42"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5722"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2535"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: 1025-5000
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "42"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "67"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-active-directory-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-active-directory-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "137"
       protocol: UDP
@@ -3895,241 +2157,45 @@ spec:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "563"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "143"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "995"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "119"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "110"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "993"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "691"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2883"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "379"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2003
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2003
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "102"
       protocol: TCP
@@ -4150,122 +2216,24 @@ spec:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "50389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "587"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "995"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "110"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "993"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5060"
       protocol: TCP
@@ -4273,207 +2241,39 @@ spec:
       protocol: TCP
     - port: "5062"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "143"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2007
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2007
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "50636"
       protocol: TCP
@@ -4494,37 +2294,9 @@ spec:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5060"
       protocol: TCP
@@ -4538,20 +2310,6 @@ spec:
       protocol: TCP
     - port: "5068"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5075"
       protocol: TCP
@@ -4559,207 +2317,39 @@ spec:
       protocol: TCP
     - port: "5077"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "808"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "995"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "110"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "64327"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "993"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "143"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5075"
       protocol: TCP
@@ -4767,37 +2357,9 @@ spec:
       protocol: TCP
     - port: "5077"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5060"
       protocol: TCP
@@ -4805,105 +2367,21 @@ spec:
       protocol: TCP
     - port: "5062"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3268"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "587"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "50636"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-exchange-2010
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-exchange-2010
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
@@ -4958,122 +2436,24 @@ spec:
   - ports:
     - port: "1434"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-sql-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-sql-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2382"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-sql-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-sql-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2383"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-sql-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-sql-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1434"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-sql-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-sql-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-sql-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-sql-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-sql-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-sql-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: microsoft-sql-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: microsoft-sql-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
@@ -5593,615 +2973,111 @@ spec:
   - ports:
     - port: "4443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3701"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "6100"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3201"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7501"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4444"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4401"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3601"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1809"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3501"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4400"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "6668"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "636"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4001"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3301"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "6003"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "14000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3339"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9998"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7778"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4002"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8007"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1808"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7100"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7200"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7779"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "6200"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1748"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7777"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1754"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4032"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3401"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-application-server
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-application-server
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4031"
       protocol: TCP
@@ -6256,105 +3132,21 @@ spec:
   - ports:
     - port: "1521"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-database
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-database
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2100"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-database
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-database
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2482"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-database
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-database
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1575"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-database
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-database
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8080"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-database
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-database
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "2481"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-database
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-database
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1526"
       protocol: TCP
@@ -6375,54 +3167,12 @@ spec:
   - ports:
     - port: "1831"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-enterprise-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-enterprise-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1810"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-enterprise-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-enterprise-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1850"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-enterprise-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-enterprise-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "44000"
       protocol: TCP
@@ -7021,156 +3771,30 @@ spec:
   - ports:
     - port: "4767"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "15000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4758"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4759"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4764"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4766"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4761"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4662"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "15004"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-times-ten
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-times-ten
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "15002"
       protocol: TCP
@@ -7395,20 +4019,6 @@ spec:
   - ports:
     - port: "5560"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: oracle-i*sqlplus
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: oracle-i*sqlplus
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5580"
       protocol: TCP
@@ -7582,275 +4192,51 @@ spec:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8281"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8230"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5432"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8240"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8283"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1521"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "636"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8282"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8244"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8250"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3306"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8280"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: orchestrator
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: orchestrator
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
@@ -9790,37 +6176,9 @@ spec:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "137"
       protocol: TCP
@@ -9828,277 +6186,53 @@ spec:
       protocol: TCP
     - port: "139"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "56737"
       protocol: TCP
     - port: "56738"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "137"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1434"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "138"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "636"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2007-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2007-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3389"
       protocol: TCP
@@ -10119,294 +6253,56 @@ spec:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5725"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "137"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "3389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1434"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "636"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "464"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "56737"
       protocol: TCP
     - port: "56738"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "32843"
       protocol: TCP
@@ -10414,54 +6310,12 @@ spec:
       protocol: TCP
     - port: "32845"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "137"
       protocol: TCP
@@ -10469,20 +6323,6 @@ spec:
       protocol: TCP
     - port: "139"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: sharepoint-2010-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: sharepoint-2010-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "138"
       protocol: UDP
@@ -10503,294 +6343,56 @@ spec:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8096"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "902"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5480"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9008"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "31031"
       protocol: TCP
     - port: "44046"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8095"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8080"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8282"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1521"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8043"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8123"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1526"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9007"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9085"
       protocol: TCP
@@ -10811,364 +6413,70 @@ spec:
   - ports:
     - port: "9007"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8043"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9008"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9085"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9086"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5480"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8080"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8043"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "902"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1526"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8282"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "31031"
       protocol: TCP
     - port: "44046"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "31031"
       protocol: TCP
     - port: "44046"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8095"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1521"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8123"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: site-recovery-manager-6.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: site-recovery-manager-6.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8096"
       protocol: TCP
@@ -11376,156 +6684,30 @@ spec:
   - ports:
     - port: "735"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9087"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1521"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: 9000-9100
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "9084"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8084"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: update-manager
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: update-manager
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "902"
       protocol: TCP
@@ -11563,20 +6745,6 @@ spec:
   - ports:
     - port: "8000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-esxi-dump-collector
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-esxi-dump-collector
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "6500"
       protocol: UDP
@@ -12370,88 +7538,18 @@ spec:
   - ports:
     - port: "4172"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: view-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: view-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4172"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: view-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: view-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "902"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: view-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: view-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: view-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: view-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4001"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: view-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: view-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
@@ -12472,224 +7570,42 @@ spec:
   - ports:
     - port: "3389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4001"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: 1024-65535
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "4100"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "445"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8009"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vmware-view/vdm2.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vmware-view/vdm2.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "42966"
       protocol: TCP
@@ -13180,122 +8096,24 @@ spec:
   - ports:
     - port: "902"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "161"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "51915"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1433"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "162"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8443"
       protocol: TCP
@@ -13303,241 +8121,45 @@ spec:
       protocol: TCP
     - port: "10443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "10080"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1434"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "389"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "623"
       protocol: UDP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5988"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "902"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8000"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "53"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "636"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1521"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "88"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "135"
       protocol: ""
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "7500"
       protocol: TCP
@@ -13561,71 +8183,15 @@ spec:
       protocol: TCP
     - port: "60099"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "8080"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "5989"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "903"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcenter5.x-v1
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcenter5.x-v1
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "25"
       protocol: TCP
@@ -13646,54 +8212,12 @@ spec:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-manager-(standalone)-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-manager-(standalone)-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-manager-(standalone)-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-manager-(standalone)-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1199"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-manager-(standalone)-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-manager-(standalone)-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "61616"
       protocol: TCP
@@ -13714,54 +8238,12 @@ spec:
   - ports:
     - port: "443"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-manager-(vapp)-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-manager-(vapp)-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "22"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-manager-(vapp)-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-manager-(vapp)-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "80"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-manager-(vapp)-5.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-manager-(vapp)-5.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "1194"
       protocol: TCP
@@ -13782,37 +8264,9 @@ spec:
   - ports:
     - port: "5480"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-standard-1.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-standard-1.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "22"
       protocol: TCP
-
----
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: vcentre-operations-standard-1.x
-  namespace: demo
-spec:
-  podSelector:
-    matchLabels:
-      app: vcentre-operations-standard-1.x
-  policyTypes:
-  - Ingress
-  ingress:
   - ports:
     - port: "443"
       protocol: TCP
