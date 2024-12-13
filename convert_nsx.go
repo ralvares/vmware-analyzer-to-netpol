@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"regexp"
 	"strings"
 
 	"gopkg.in/yaml.v2"
@@ -86,9 +87,12 @@ func main() {
 			APIVersion: "networking.k8s.io/v1",
 			Kind:       "NetworkPolicy",
 		}
-		policy.Metadata.Name = strings.ToLower(strings.ReplaceAll(service.DisplayName, " ", "-"))
+
+		// Sanitize display name to ensure it is a valid DNS-1123 label
+		sanitizedName := sanitizeName(service.DisplayName)
+		policy.Metadata.Name = sanitizedName
 		policy.Metadata.Namespace = *namespace
-		policy.Spec.PodSelector.MatchLabels = map[string]string{"app": policy.Metadata.Name}
+		policy.Spec.PodSelector.MatchLabels = map[string]string{"app": sanitizedName}
 
 		// Initialize ingress and egress sections
 		var ingressRules []struct {
@@ -159,4 +163,15 @@ func main() {
 
 		fmt.Printf("---\n%s\n", string(yamlData))
 	}
+}
+
+// sanitizeName ensures a name complies with DNS-1123 naming conventions
+func sanitizeName(name string) string {
+	// Replace invalid characters with a hyphen
+	name = strings.ToLower(name)
+	re := regexp.MustCompile(`[^a-z0-9-]+`)
+	name = re.ReplaceAllString(name, "-")
+	// Ensure it starts and ends with an alphanumeric character
+	name = strings.Trim(name, "-")
+	return name
 }

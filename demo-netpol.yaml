@@ -104,12 +104,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: dhcp,-madcap
+  name: dhcp-madcap
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: dhcp,-madcap
+      app: dhcp-madcap
   policyTypes:
   - Ingress
   ingress:
@@ -354,12 +354,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: edgesync-service/adam
+  name: edgesync-service-adam
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: edgesync-service/adam
+      app: edgesync-service-adam
   policyTypes:
   - Ingress
   ingress:
@@ -473,12 +473,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: for-x.400-connections-over-tcp
+  name: for-x-400-connections-over-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: for-x.400-connections-over-tcp
+      app: for-x-400-connections-over-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -575,12 +575,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: https,-net.tcp-binding
+  name: https-net-tcp-binding
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: https,-net.tcp-binding
+      app: https-net-tcp-binding
   policyTypes:
   - Ingress
   ingress:
@@ -828,12 +828,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: ike-(key-exchange)
+  name: ike-key-exchange
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: ike-(key-exchange)
+      app: ike-key-exchange
   policyTypes:
   - Ingress
   ingress:
@@ -845,12 +845,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: ike-(nat-traversal)
+  name: ike-nat-traversal
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: ike-(nat-traversal)
+      app: ike-nat-traversal
   policyTypes:
   - Ingress
   ingress:
@@ -879,12 +879,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: imap_ssl
+  name: imap-ssl
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: imap_ssl
+      app: imap-ssl
   policyTypes:
   - Ingress
   ingress:
@@ -1239,12 +1239,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: mgcp-(tcp)
+  name: mgcp-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: mgcp-(tcp)
+      app: mgcp-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -1256,12 +1256,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: mgcp-(udp)
+  name: mgcp-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: mgcp-(udp)
+      app: mgcp-udp
   policyTypes:
   - Ingress
   ingress:
@@ -1884,12 +1884,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: msn-(tcp)
+  name: msn-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: msn-(tcp)
+      app: msn-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -1901,12 +1901,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: msn-(udp)
+  name: msn-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: msn-(udp)
+      app: msn-udp
   policyTypes:
   - Ingress
   ingress:
@@ -2013,12 +2013,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: ms_rpc_tcp
+  name: ms-rpc-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: ms_rpc_tcp
+      app: ms-rpc-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -2030,12 +2030,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: ms_rpc_udp
+  name: ms-rpc-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: ms_rpc_udp
+      app: ms-rpc-udp
   policyTypes:
   - Ingress
   ingress:
@@ -2390,12 +2390,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: microsoft-media-server-(tcp)
+  name: microsoft-media-server-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: microsoft-media-server-(tcp)
+      app: microsoft-media-server-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -2407,12 +2407,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: microsoft-media-server-(udp)
+  name: microsoft-media-server-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: microsoft-media-server-(udp)
+      app: microsoft-media-server-udp
   policyTypes:
   - Ingress
   ingress:
@@ -2513,12 +2513,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: nfs-(tcp)
+  name: nfs-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: nfs-(tcp)
+      app: nfs-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -2530,12 +2530,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: nfs-(udp)
+  name: nfs-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: nfs-(udp)
+      app: nfs-udp
   policyTypes:
   - Ingress
   ingress:
@@ -2632,12 +2632,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: nntp_ssl
+  name: nntp-ssl
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: nntp_ssl
+      app: nntp-ssl
   policyTypes:
   - Ingress
   ingress:
@@ -2683,12 +2683,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: netbios-datagram-(tcp)
+  name: netbios-datagram-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: netbios-datagram-(tcp)
+      app: netbios-datagram-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -2700,12 +2700,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: netbios-datagram-(udp)
+  name: netbios-datagram-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: netbios-datagram-(udp)
+      app: netbios-datagram-udp
   policyTypes:
   - Ingress
   ingress:
@@ -2717,12 +2717,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: netbios-name-service-(tcp)
+  name: netbios-name-service-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: netbios-name-service-(tcp)
+      app: netbios-name-service-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -2734,12 +2734,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: netbios-name-service-(udp)
+  name: netbios-name-service-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: netbios-name-service-(udp)
+      app: netbios-name-service-udp
   policyTypes:
   - Ingress
   ingress:
@@ -2751,12 +2751,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: netbios-session-service-(tcp)
+  name: netbios-session-service-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: netbios-session-service-(tcp)
+      app: netbios-session-service-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -2768,12 +2768,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: netbios-session-service-(udp)
+  name: netbios-session-service-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: netbios-session-service-(udp)
+      app: netbios-session-service-udp
   policyTypes:
   - Ingress
   ingress:
@@ -2785,12 +2785,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oc4j-forms-/-reports-instance
+  name: oc4j-forms-reports-instance
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oc4j-forms-/-reports-instance
+      app: oc4j-forms-reports-instance
   policyTypes:
   - Ingress
   ingress:
@@ -2802,12 +2802,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oc4j-forms-/-reports-instance-(8889)
+  name: oc4j-forms-reports-instance-8889
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oc4j-forms-/-reports-instance-(8889)
+      app: oc4j-forms-reports-instance-8889
   policyTypes:
   - Ingress
   ingress:
@@ -2870,12 +2870,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle_tns
+  name: oracle-tns
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle_tns
+      app: oracle-tns
   policyTypes:
   - Ingress
   ingress:
@@ -2904,12 +2904,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: office-server-web-services,-http,-ssl
+  name: office-server-web-services-http-ssl
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: office-server-web-services,-http,-ssl
+      app: office-server-web-services-http-ssl
   policyTypes:
   - Ingress
   ingress:
@@ -3086,12 +3086,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-connection-manager-(cman)
+  name: oracle-connection-manager-cman
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-connection-manager-(cman)
+      app: oracle-connection-manager-cman
   policyTypes:
   - Ingress
   ingress:
@@ -3103,12 +3103,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-connection-manager-admin-(cman)
+  name: oracle-connection-manager-admin-cman
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-connection-manager-admin-(cman)
+      app: oracle-connection-manager-admin-cman
   policyTypes:
   - Ingress
   ingress:
@@ -3215,12 +3215,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-forms-server-6-/-6i
+  name: oracle-forms-server-6-6i
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-forms-server-6-/-6i
+      app: oracle-forms-server-6-6i
   policyTypes:
   - Ingress
   ingress:
@@ -3368,12 +3368,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-intelligent-agent-(1748)
+  name: oracle-intelligent-agent-1748
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-intelligent-agent-(1748)
+      app: oracle-intelligent-agent-1748
   policyTypes:
   - Ingress
   ingress:
@@ -3385,12 +3385,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-intelligent-agent-(1754)
+  name: oracle-intelligent-agent-1754
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-intelligent-agent-(1754)
+      app: oracle-intelligent-agent-1754
   policyTypes:
   - Ingress
   ingress:
@@ -3402,12 +3402,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-intelligent-agent-(1808)
+  name: oracle-intelligent-agent-1808
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-intelligent-agent-(1808)
+      app: oracle-intelligent-agent-1808
   policyTypes:
   - Ingress
   ingress:
@@ -3419,12 +3419,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-intelligent-agent-(1809)
+  name: oracle-intelligent-agent-1809
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-intelligent-agent-(1809)
+      app: oracle-intelligent-agent-1809
   policyTypes:
   - Ingress
   ingress:
@@ -3436,12 +3436,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-internet-directory(ssl)
+  name: oracle-internet-directory-ssl
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-internet-directory(ssl)
+      app: oracle-internet-directory-ssl
   policyTypes:
   - Ingress
   ingress:
@@ -3453,12 +3453,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-internet-directory(ssl,-4031)
+  name: oracle-internet-directory-ssl-4031
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-internet-directory(ssl,-4031)
+      app: oracle-internet-directory-ssl-4031
   policyTypes:
   - Ingress
   ingress:
@@ -3470,12 +3470,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-internet-directory(non-ssl)
+  name: oracle-internet-directory-non-ssl
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-internet-directory(non-ssl)
+      app: oracle-internet-directory-non-ssl
   policyTypes:
   - Ingress
   ingress:
@@ -3487,12 +3487,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-internet-directory(non-ssl,-4032)
+  name: oracle-internet-directory-non-ssl-4032
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-internet-directory(non-ssl,-4032)
+      app: oracle-internet-directory-non-ssl-4032
   policyTypes:
   - Ingress
   ingress:
@@ -3555,12 +3555,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-net-listener-/-enterprise-manager-repository-port
+  name: oracle-net-listener-enterprise-manager-repository-port
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-net-listener-/-enterprise-manager-repository-port
+      app: oracle-net-listener-enterprise-manager-repository-port
   policyTypes:
   - Ingress
   ingress:
@@ -3803,12 +3803,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-times-ten-(15000)
+  name: oracle-times-ten-15000
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-times-ten-(15000)
+      app: oracle-times-ten-15000
   policyTypes:
   - Ingress
   ingress:
@@ -3820,12 +3820,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-times-ten-(15002)
+  name: oracle-times-ten-15002
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-times-ten-(15002)
+      app: oracle-times-ten-15002
   policyTypes:
   - Ingress
   ingress:
@@ -3837,12 +3837,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-times-ten-(15004)
+  name: oracle-times-ten-15004
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-times-ten-(15004)
+      app: oracle-times-ten-15004
   policyTypes:
   - Ingress
   ingress:
@@ -3871,12 +3871,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-timesten-(4758)
+  name: oracle-timesten-4758
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-timesten-(4758)
+      app: oracle-timesten-4758
   policyTypes:
   - Ingress
   ingress:
@@ -3888,12 +3888,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-timesten-(4759)
+  name: oracle-timesten-4759
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-timesten-(4759)
+      app: oracle-timesten-4759
   policyTypes:
   - Ingress
   ingress:
@@ -3905,12 +3905,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-timesten-(4761)
+  name: oracle-timesten-4761
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-timesten-(4761)
+      app: oracle-timesten-4761
   policyTypes:
   - Ingress
   ingress:
@@ -3922,12 +3922,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-timesten-(4764)
+  name: oracle-timesten-4764
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-timesten-(4764)
+      app: oracle-timesten-4764
   policyTypes:
   - Ingress
   ingress:
@@ -3939,12 +3939,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-timesten-(4766)
+  name: oracle-timesten-4766
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-timesten-(4766)
+      app: oracle-timesten-4766
   policyTypes:
   - Ingress
   ingress:
@@ -3956,12 +3956,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-timesten-(4767)
+  name: oracle-timesten-4767
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-timesten-(4767)
+      app: oracle-timesten-4767
   policyTypes:
   - Ingress
   ingress:
@@ -4007,12 +4007,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle-i*sqlplus
+  name: oracle-i-sqlplus
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle-i*sqlplus
+      app: oracle-i-sqlplus
   policyTypes:
   - Ingress
   ingress:
@@ -4078,12 +4078,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle9ias-web-cache-http-listen(ssl)-port
+  name: oracle9ias-web-cache-http-listen-ssl-port
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle9ias-web-cache-http-listen(ssl)-port
+      app: oracle9ias-web-cache-http-listen-ssl-port
   policyTypes:
   - Ingress
   ingress:
@@ -4095,12 +4095,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracle9ias-web-cache-http-listen(non-ssl)-port
+  name: oracle9ias-web-cache-http-listen-non-ssl-port
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracle9ias-web-cache-http-listen(non-ssl)-port
+      app: oracle9ias-web-cache-http-listen-non-ssl-port
   policyTypes:
   - Ingress
   ingress:
@@ -4146,12 +4146,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracleas-certificate-authority-(oca)---mutual-authentication
+  name: oracleas-certificate-authority-oca---mutual-authentication
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracleas-certificate-authority-(oca)---mutual-authentication
+      app: oracleas-certificate-authority-oca---mutual-authentication
   policyTypes:
   - Ingress
   ingress:
@@ -4163,12 +4163,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: oracleas-certificate-authority-(oca)---server-authentication
+  name: oracleas-certificate-authority-oca---server-authentication
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: oracleas-certificate-authority-(oca)---server-authentication
+      app: oracleas-certificate-authority-oca---server-authentication
   policyTypes:
   - Ingress
   ingress:
@@ -4245,12 +4245,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: pc-anywhere-(tcp)
+  name: pc-anywhere-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: pc-anywhere-(tcp)
+      app: pc-anywhere-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -4262,12 +4262,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: pc-anywhere-(udp)
+  name: pc-anywhere-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: pc-anywhere-(udp)
+      app: pc-anywhere-udp
   policyTypes:
   - Ingress
   ingress:
@@ -4296,12 +4296,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: pop3_ssl
+  name: pop3-ssl
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: pop3_ssl
+      app: pop3-ssl
   policyTypes:
   - Ingress
   ingress:
@@ -4364,12 +4364,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: rpc,-dfsr-(sysvol)
+  name: rpc-dfsr-sysvol
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: rpc,-dfsr-(sysvol)
+      app: rpc-dfsr-sysvol
   policyTypes:
   - Ingress
   ingress:
@@ -4381,12 +4381,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: rtsp-(tcp)
+  name: rtsp-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: rtsp-(tcp)
+      app: rtsp-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -4398,12 +4398,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: rtsp-(udp)
+  name: rtsp-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: rtsp-(udp)
+      app: rtsp-udp
   policyTypes:
   - Ingress
   ingress:
@@ -4653,12 +4653,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sap-exchange-groupware-connector-(dcom)
+  name: sap-exchange-groupware-connector-dcom
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sap-exchange-groupware-connector-(dcom)
+      app: sap-exchange-groupware-connector-dcom
   policyTypes:
   - Ingress
   ingress:
@@ -4687,12 +4687,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sap-grmg-service-(heartbeat)
+  name: sap-grmg-service-heartbeat
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sap-grmg-service-(heartbeat)
+      app: sap-grmg-service-heartbeat
   policyTypes:
   - Ingress
   ingress:
@@ -5135,12 +5135,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sap-jms/jdbc/file-adapter-server
+  name: sap-jms-jdbc-file-adapter-server
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sap-jms/jdbc/file-adapter-server
+      app: sap-jms-jdbc-file-adapter-server
   policyTypes:
   - Ingress
   ingress:
@@ -5368,12 +5368,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sap-monitoring-(grmg)
+  name: sap-monitoring-grmg
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sap-monitoring-(grmg)
+      app: sap-monitoring-grmg
   policyTypes:
   - Ingress
   ingress:
@@ -5674,12 +5674,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sap-sdm/sl
+  name: sap-sdm-sl
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sap-sdm/sl
+      app: sap-sdm-sl
   policyTypes:
   - Ingress
   ingress:
@@ -5803,12 +5803,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sap-gateway---cpic/rfc
+  name: sap-gateway---cpic-rfc
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sap-gateway---cpic/rfc
+      app: sap-gateway---cpic-rfc
   policyTypes:
   - Ingress
   ingress:
@@ -5820,12 +5820,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sap-gateway/replication
+  name: sap-gateway-replication
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sap-gateway/replication
+      app: sap-gateway-replication
   policyTypes:
   - Ingress
   ingress:
@@ -5973,12 +5973,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: smtp_tls
+  name: smtp-tls
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: smtp_tls
+      app: smtp-tls
   policyTypes:
   - Ingress
   ingress:
@@ -6109,12 +6109,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sun_rpc_tcp
+  name: sun-rpc-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sun_rpc_tcp
+      app: sun-rpc-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -6126,12 +6126,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: sun_rpc_udp
+  name: sun-rpc-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: sun_rpc_udp
+      app: sun-rpc-udp
   policyTypes:
   - Ingress
   ingress:
@@ -6143,12 +6143,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: server-message-block-(smb)
+  name: server-message-block-smb
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: server-message-block-(smb)
+      app: server-message-block-smb
   policyTypes:
   - Ingress
   ingress:
@@ -6331,12 +6331,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: site-recovery-manager-5.x
+  name: site-recovery-manager-5-x
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: site-recovery-manager-5.x
+      app: site-recovery-manager-5-x
   policyTypes:
   - Ingress
   ingress:
@@ -6401,12 +6401,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: site-recovery-manager-6.x
+  name: site-recovery-manager-6-x
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: site-recovery-manager-6.x
+      app: site-recovery-manager-6-x
   policyTypes:
   - Ingress
   ingress:
@@ -6519,12 +6519,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: syslog-(tcp)
+  name: syslog-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: syslog-(tcp)
+      app: syslog-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -6536,12 +6536,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: syslog-(udp)
+  name: syslog-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: syslog-(udp)
+      app: syslog-udp
   policyTypes:
   - Ingress
   ingress:
@@ -6587,12 +6587,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: t120-(whiteboard-a43)
+  name: t120-whiteboard-a43
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: t120-(whiteboard-a43)
+      app: t120-whiteboard-a43
   policyTypes:
   - Ingress
   ingress:
@@ -6638,12 +6638,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: terminal-services-(tcp)
+  name: terminal-services-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: terminal-services-(tcp)
+      app: terminal-services-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -6655,12 +6655,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: terminal-services-(udp)
+  name: terminal-services-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: terminal-services-(udp)
+      app: terminal-services-udp
   policyTypes:
   - Ingress
   ingress:
@@ -6823,12 +6823,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-esxi5.x-tcp
+  name: vmware-esxi5-x-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-esxi5.x-tcp
+      app: vmware-esxi5-x-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -6840,12 +6840,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-esxi5.x-udp
+  name: vmware-esxi5-x-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-esxi5.x-udp
+      app: vmware-esxi5-x-udp
   policyTypes:
   - Ingress
   ingress:
@@ -7388,12 +7388,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-vdm2.x-ephemeral
+  name: vmware-vdm2-x-ephemeral
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-vdm2.x-ephemeral
+      app: vmware-vdm2-x-ephemeral
   policyTypes:
   - Ingress
   ingress:
@@ -7405,12 +7405,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-vdm2.x-rgs
+  name: vmware-vdm2-x-rgs
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-vdm2.x-rgs
+      app: vmware-vdm2-x-rgs
   policyTypes:
   - Ingress
   ingress:
@@ -7475,12 +7475,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-view5.x-jms
+  name: vmware-view5-x-jms
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-view5.x-jms
+      app: vmware-view5-x-jms
   policyTypes:
   - Ingress
   ingress:
@@ -7492,12 +7492,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-view5.x-pcoip-udp
+  name: vmware-view5-x-pcoip-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-view5.x-pcoip-udp
+      app: vmware-view5-x-pcoip-udp
   policyTypes:
   - Ingress
   ingress:
@@ -7526,12 +7526,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: view-5.x
+  name: view-5-x
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: view-5.x
+      app: view-5-x
   policyTypes:
   - Ingress
   ingress:
@@ -7558,12 +7558,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-view/vdm2.x
+  name: vmware-view-vdm2-x
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-view/vdm2.x
+      app: vmware-view-vdm2-x
   policyTypes:
   - Ingress
   ingress:
@@ -7846,12 +7846,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-vdm2.x-ajp
+  name: vmware-vdm2-x-ajp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-vdm2.x-ajp
+      app: vmware-vdm2-x-ajp
   policyTypes:
   - Ingress
   ingress:
@@ -7863,12 +7863,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vmware-vdm2.x-jms
+  name: vmware-vdm2-x-jms
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vmware-vdm2.x-jms
+      app: vmware-vdm2-x-jms
   policyTypes:
   - Ingress
   ingress:
@@ -7914,12 +7914,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: win---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs---tcp
+  name: win---rpc-dcom-epm-drsuapi-netlogonr-samr-frs---tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: win---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs---tcp
+      app: win---rpc-dcom-epm-drsuapi-netlogonr-samr-frs---tcp
   policyTypes:
   - Ingress
   ingress:
@@ -7931,12 +7931,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: win---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs---udp
+  name: win---rpc-dcom-epm-drsuapi-netlogonr-samr-frs---udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: win---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs---udp
+      app: win---rpc-dcom-epm-drsuapi-netlogonr-samr-frs---udp
   policyTypes:
   - Ingress
   ingress:
@@ -7948,12 +7948,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: win-2003---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs
+  name: win-2003---rpc-dcom-epm-drsuapi-netlogonr-samr-frs
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: win-2003---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs
+      app: win-2003---rpc-dcom-epm-drsuapi-netlogonr-samr-frs
   policyTypes:
   - Ingress
   ingress:
@@ -7965,12 +7965,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: win-2008---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs
+  name: win-2008---rpc-dcom-epm-drsuapi-netlogonr-samr-frs
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: win-2008---rpc,-dcom,-epm,-drsuapi,-netlogonr,-samr,-frs
+      app: win-2008---rpc-dcom-epm-drsuapi-netlogonr-samr-frs
   policyTypes:
   - Ingress
   ingress:
@@ -8016,12 +8016,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: yahoo-messenger-(tcp)
+  name: yahoo-messenger-tcp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: yahoo-messenger-(tcp)
+      app: yahoo-messenger-tcp
   policyTypes:
   - Ingress
   ingress:
@@ -8033,12 +8033,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: yahoo-messenger-(udp)
+  name: yahoo-messenger-udp
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: yahoo-messenger-(udp)
+      app: yahoo-messenger-udp
   policyTypes:
   - Ingress
   ingress:
@@ -8067,12 +8067,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: isqlplus-10g-(5580)
+  name: isqlplus-10g-5580
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: isqlplus-10g-(5580)
+      app: isqlplus-10g-5580
   policyTypes:
   - Ingress
   ingress:
@@ -8084,12 +8084,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vcenter5.x-v1
+  name: vcenter5-x-v1
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vcenter5.x-v1
+      app: vcenter5-x-v1
   policyTypes:
   - Ingress
   ingress:
@@ -8200,12 +8200,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vcentre-operations-manager-(standalone)-5.x
+  name: vcentre-operations-manager-standalone-5-x
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vcentre-operations-manager-(standalone)-5.x
+      app: vcentre-operations-manager-standalone-5-x
   policyTypes:
   - Ingress
   ingress:
@@ -8226,12 +8226,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vcentre-operations-manager-(vapp)-5.x
+  name: vcentre-operations-manager-vapp-5-x
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vcentre-operations-manager-(vapp)-5.x
+      app: vcentre-operations-manager-vapp-5-x
   policyTypes:
   - Ingress
   ingress:
@@ -8252,12 +8252,12 @@ spec:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: vcentre-operations-standard-1.x
+  name: vcentre-operations-standard-1-x
   namespace: demo
 spec:
   podSelector:
     matchLabels:
-      app: vcentre-operations-standard-1.x
+      app: vcentre-operations-standard-1-x
   policyTypes:
   - Ingress
   ingress:
