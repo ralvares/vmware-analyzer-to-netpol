@@ -7,6 +7,7 @@ import (
 	"io/ioutil"
 	"log"
 	"regexp"
+	"strconv"
 	"strings"
 
 	"gopkg.in/yaml.v2"
@@ -46,13 +47,13 @@ type NetworkPolicy struct {
 		PolicyTypes []string `yaml:"policyTypes"`
 		Ingress     []struct {
 			Ports []struct {
-				Port     string `yaml:"port"`
+				Port     int    `yaml:"port"`
 				Protocol string `yaml:"protocol"`
 			} `yaml:"ports"`
 		} `yaml:"ingress"`
 		Egress []struct {
 			Ports []struct {
-				Port     string `yaml:"port"`
+				Port     int    `yaml:"port"`
 				Protocol string `yaml:"protocol"`
 			} `yaml:"ports"`
 		} `yaml:"egress,omitempty"`
@@ -97,13 +98,13 @@ func main() {
 		// Initialize ingress and egress sections
 		var ingressRules []struct {
 			Ports []struct {
-				Port     string `yaml:"port"`
+				Port     int    `yaml:"port"`
 				Protocol string `yaml:"protocol"`
 			} `yaml:"ports"`
 		}
 		var egressRules []struct {
 			Ports []struct {
-				Port     string `yaml:"port"`
+				Port     int    `yaml:"port"`
 				Protocol string `yaml:"protocol"`
 			} `yaml:"ports"`
 		}
@@ -114,15 +115,16 @@ func main() {
 			if len(entry.DestinationPorts) > 0 {
 				ingress := struct {
 					Ports []struct {
-						Port     string `yaml:"port"`
+						Port     int    `yaml:"port"`
 						Protocol string `yaml:"protocol"`
 					} `yaml:"ports"`
 				}{}
 				for _, port := range entry.DestinationPorts {
+					portInt, _ := strconv.Atoi(port)
 					ingress.Ports = append(ingress.Ports, struct {
-						Port     string `yaml:"port"`
+						Port     int    `yaml:"port"`
 						Protocol string `yaml:"protocol"`
-					}{Port: port, Protocol: entry.L4Protocol})
+					}{Port: portInt, Protocol: entry.L4Protocol})
 				}
 				ingressRules = append(ingressRules, ingress)
 			}
@@ -131,15 +133,16 @@ func main() {
 			if len(entry.SourcePorts) > 0 {
 				egress := struct {
 					Ports []struct {
-						Port     string `yaml:"port"`
+						Port     int    `yaml:"port"`
 						Protocol string `yaml:"protocol"`
 					} `yaml:"ports"`
 				}{}
 				for _, port := range entry.SourcePorts {
+					portInt, _ := strconv.Atoi(port)
 					egress.Ports = append(egress.Ports, struct {
-						Port     string `yaml:"port"`
+						Port     int    `yaml:"port"`
 						Protocol string `yaml:"protocol"`
-					}{Port: port, Protocol: entry.L4Protocol})
+					}{Port: portInt, Protocol: entry.L4Protocol})
 				}
 				egressRules = append(egressRules, egress)
 			}

@@ -12,7 +12,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1024"
+    - port: 1024
       protocol: TCP
 
 ---
@@ -29,7 +29,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "464"
+    - port: 464
       protocol: TCP
 
 ---
@@ -46,7 +46,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "464"
+    - port: 464
       protocol: UDP
 
 ---
@@ -63,7 +63,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5988"
+    - port: 5988
       protocol: TCP
 
 ---
@@ -80,7 +80,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5989"
+    - port: 5989
       protocol: TCP
 
 ---
@@ -97,7 +97,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7100"
+    - port: 7100
       protocol: TCP
 
 ---
@@ -114,7 +114,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2535"
+    - port: 2535
       protocol: UDP
 
 ---
@@ -131,7 +131,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "68"
+    - port: 68
       protocol: UDP
 
 ---
@@ -148,7 +148,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "67"
+    - port: 67
       protocol: UDP
 
 ---
@@ -165,7 +165,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "546"
+    - port: 546
       protocol: UDP
 
 ---
@@ -182,7 +182,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "547"
+    - port: 547
       protocol: UDP
 
 ---
@@ -200,10 +200,10 @@ spec:
   ingress: []
   egress:
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
 
 ---
@@ -221,7 +221,7 @@ spec:
   ingress: []
   egress:
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
 
 ---
@@ -239,7 +239,7 @@ spec:
   ingress: []
   egress:
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
 
 ---
@@ -256,7 +256,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
 
 ---
@@ -273,7 +273,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
 
 ---
@@ -290,13 +290,13 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "22024"
+    - port: 22024
       protocol: TCP
   - ports:
-    - port: "902"
+    - port: 902
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -313,7 +313,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5725"
+    - port: 5725
       protocol: TCP
 
 ---
@@ -330,7 +330,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8001"
+    - port: 8001
       protocol: TCP
 
 ---
@@ -347,7 +347,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50636"
+    - port: 50636
       protocol: TCP
 
 ---
@@ -364,7 +364,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50389"
+    - port: 50389
       protocol: TCP
 
 ---
@@ -381,7 +381,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1850"
+    - port: 1850
       protocol: TCP
 
 ---
@@ -398,7 +398,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3339"
+    - port: 3339
       protocol: TCP
 
 ---
@@ -415,7 +415,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1810"
+    - port: 1810
       protocol: TCP
 
 ---
@@ -432,7 +432,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1831"
+    - port: 1831
       protocol: TCP
 
 ---
@@ -449,7 +449,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2883"
+    - port: 2883
       protocol: UDP
 
 ---
@@ -466,7 +466,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "21"
+    - port: 21
       protocol: ""
 
 ---
@@ -483,7 +483,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "102"
+    - port: 102
       protocol: TCP
 
 ---
@@ -500,7 +500,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1720"
+    - port: 1720
       protocol: TCP
 
 ---
@@ -517,7 +517,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1718"
+    - port: 1718
       protocol: UDP
 
 ---
@@ -534,7 +534,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5480"
+    - port: 5480
       protocol: TCP
 
 ---
@@ -551,7 +551,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
 
 ---
@@ -568,7 +568,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -585,11 +585,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "32843"
+    - port: 32843
       protocol: TCP
-    - port: "32844"
+    - port: 32844
       protocol: TCP
-    - port: "32845"
+    - port: 32845
       protocol: TCP
 
 ---
@@ -606,10 +606,10 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "57348"
+    - port: 57348
       protocol: TCP
   - ports:
-    - port: "52267"
+    - port: 52267
       protocol: TCP
 
 ---
@@ -626,7 +626,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5000"
+    - port: 5000
       protocol: TCP
 
 ---
@@ -838,7 +838,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "500"
+    - port: 500
       protocol: UDP
 
 ---
@@ -855,7 +855,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4500"
+    - port: 4500
       protocol: UDP
 
 ---
@@ -872,7 +872,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "143"
+    - port: 143
       protocol: TCP
 
 ---
@@ -889,7 +889,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "993"
+    - port: 993
       protocol: TCP
 
 ---
@@ -1062,7 +1062,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "500"
+    - port: 500
       protocol: UDP
 
 ---
@@ -1079,7 +1079,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7000"
+    - port: 7000
       protocol: TCP
 
 ---
@@ -1096,7 +1096,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
 
 ---
@@ -1113,7 +1113,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
 
 ---
@@ -1130,7 +1130,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
 
 ---
@@ -1147,7 +1147,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
 
 ---
@@ -1164,7 +1164,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3268"
+    - port: 3268
       protocol: TCP
 
 ---
@@ -1181,7 +1181,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
 
 ---
@@ -1198,7 +1198,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "636"
+    - port: 636
       protocol: TCP
 
 ---
@@ -1215,7 +1215,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "636"
+    - port: 636
       protocol: UDP
 
 ---
@@ -1232,7 +1232,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "44000"
+    - port: 44000
       protocol: TCP
 
 ---
@@ -1249,7 +1249,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2428"
+    - port: 2428
       protocol: TCP
 
 ---
@@ -1266,7 +1266,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2427"
+    - port: 2427
       protocol: UDP
 
 ---
@@ -1283,7 +1283,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "64327"
+    - port: 64327
       protocol: TCP
 
 ---
@@ -1300,29 +1300,29 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "143"
+    - port: 143
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "995"
+    - port: 995
       protocol: TCP
   - ports:
-    - port: "110"
+    - port: 110
       protocol: TCP
   - ports:
-    - port: "993"
+    - port: 993
       protocol: TCP
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5062"
+    - port: 5062
       protocol: TCP
 
 ---
@@ -1339,37 +1339,37 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "3268"
+    - port: 3268
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
 
 ---
@@ -1386,43 +1386,43 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3268"
+    - port: 3268
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "587"
+    - port: 587
       protocol: TCP
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "50636"
+    - port: 50636
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "50389"
+    - port: 50389
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
 
 ---
@@ -1439,23 +1439,23 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5062"
+    - port: 5062
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -1472,53 +1472,53 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "143"
+    - port: 143
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "993"
+    - port: 993
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5062"
-      protocol: TCP
-  - ports:
-    - port: "88"
+    - port: 5062
       protocol: TCP
   - ports:
-    - port: "110"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "995"
+    - port: 110
       protocol: TCP
   - ports:
-    - port: "3268"
+    - port: 995
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 3268
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 389
+      protocol: TCP
+  - ports:
+    - port: 80
       protocol: TCP
 
 ---
@@ -1535,44 +1535,44 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "64327"
+    - port: 64327
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "808"
+    - port: 808
       protocol: TCP
   - ports:
-    - port: "3268"
+    - port: 3268
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "5075"
+    - port: 5075
       protocol: TCP
-    - port: "5076"
+    - port: 5076
       protocol: TCP
-    - port: "5077"
+    - port: 5077
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
 
 ---
@@ -1589,40 +1589,40 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "3268"
+    - port: 3268
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "587"
+    - port: 587
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "50636"
+    - port: 50636
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
 
 ---
@@ -1639,57 +1639,57 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5065"
+    - port: 5065
       protocol: TCP
-    - port: "5066"
+    - port: 5066
       protocol: TCP
-    - port: "5067"
+    - port: 5067
       protocol: TCP
-    - port: "5068"
-      protocol: TCP
-  - ports:
-    - port: "88"
+    - port: 5068
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 88
+      protocol: TCP
+  - ports:
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "5075"
+    - port: 5075
       protocol: TCP
-    - port: "5076"
+    - port: 5076
       protocol: TCP
-    - port: "5077"
-      protocol: TCP
-  - ports:
-    - port: "389"
+    - port: 5077
       protocol: TCP
   - ports:
-    - port: "3268"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 3268
+      protocol: TCP
+  - ports:
+    - port: 53
       protocol: TCP
 
 ---
@@ -1706,7 +1706,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "808"
+    - port: 808
       protocol: TCP
 
 ---
@@ -1723,11 +1723,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5062"
+    - port: 5062
       protocol: TCP
 
 ---
@@ -1744,11 +1744,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5075"
+    - port: 5075
       protocol: TCP
-    - port: "5076"
+    - port: 5076
       protocol: TCP
-    - port: "5077"
+    - port: 5077
       protocol: TCP
 
 ---
@@ -1765,17 +1765,17 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5065"
+    - port: 5065
       protocol: TCP
-    - port: "5066"
+    - port: 5066
       protocol: TCP
-    - port: "5067"
+    - port: 5067
       protocol: TCP
-    - port: "5068"
+    - port: 5068
       protocol: TCP
 
 ---
@@ -1792,7 +1792,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
 
 ---
@@ -1809,7 +1809,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
 
 ---
@@ -1826,7 +1826,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "445"
+    - port: 445
       protocol: UDP
 
 ---
@@ -1843,7 +1843,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: UDP
 
 ---
@@ -1860,7 +1860,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: TCP
 
 ---
@@ -1877,7 +1877,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
 
 ---
@@ -1894,7 +1894,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1863"
+    - port: 1863
       protocol: TCP
 
 ---
@@ -1911,7 +1911,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1863"
+    - port: 1863
       protocol: UDP
 
 ---
@@ -1928,7 +1928,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
 
 ---
@@ -1945,10 +1945,10 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -1965,16 +1965,16 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2382"
+    - port: 2382
       protocol: TCP
   - ports:
-    - port: "2383"
+    - port: 2383
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
 
 ---
@@ -1991,22 +1991,22 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: UDP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -2023,7 +2023,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
 
 ---
@@ -2040,7 +2040,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
 
 ---
@@ -2057,88 +2057,88 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "138"
+    - port: 138
       protocol: UDP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: 49152-65535
+    - port: 0
       protocol: TCP
   - ports:
-    - port: 1025-65535
+    - port: 0
       protocol: UDP
   - ports:
-    - port: "3269"
+    - port: 3269
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "464"
+    - port: 464
       protocol: TCP
   - ports:
-    - port: "9389"
+    - port: 9389
       protocol: TCP
   - ports:
-    - port: "464"
+    - port: 464
       protocol: UDP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: UDP
   - ports:
-    - port: "123"
+    - port: 123
       protocol: UDP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "3268"
+    - port: 3268
       protocol: TCP
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: 1025-65535
+    - port: 0
       protocol: TCP
   - ports:
-    - port: "636"
+    - port: 636
       protocol: TCP
   - ports:
-    - port: "42"
+    - port: 42
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "5722"
+    - port: 5722
       protocol: TCP
   - ports:
-    - port: "2535"
+    - port: 2535
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: 1025-5000
+    - port: 0
       protocol: TCP
   - ports:
-    - port: "42"
+    - port: 42
       protocol: UDP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "67"
+    - port: 67
       protocol: UDP
   - ports:
-    - port: "137"
+    - port: 137
       protocol: UDP
 
 ---
@@ -2155,49 +2155,49 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "563"
+    - port: 563
       protocol: TCP
   - ports:
-    - port: "143"
+    - port: 143
       protocol: TCP
   - ports:
-    - port: "995"
+    - port: 995
       protocol: TCP
   - ports:
-    - port: "119"
+    - port: 119
       protocol: TCP
   - ports:
-    - port: "110"
+    - port: 110
       protocol: TCP
   - ports:
-    - port: "993"
+    - port: 993
       protocol: TCP
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "691"
+    - port: 691
       protocol: TCP
   - ports:
-    - port: "2883"
+    - port: 2883
       protocol: UDP
   - ports:
-    - port: "379"
+    - port: 379
       protocol: TCP
   - ports:
-    - port: "102"
+    - port: 102
       protocol: TCP
 
 ---
@@ -2214,68 +2214,68 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "50389"
+    - port: 50389
       protocol: TCP
   - ports:
-    - port: "587"
+    - port: 587
       protocol: TCP
   - ports:
-    - port: "995"
+    - port: 995
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "110"
+    - port: 110
       protocol: TCP
   - ports:
-    - port: "993"
+    - port: 993
       protocol: TCP
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5062"
-      protocol: TCP
-  - ports:
-    - port: "25"
+    - port: 5062
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "3268"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 3268
+      protocol: TCP
+  - ports:
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "143"
+    - port: 143
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "50636"
+    - port: 50636
       protocol: TCP
 
 ---
@@ -2292,98 +2292,98 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: TCP
-    - port: "5061"
+    - port: 5061
       protocol: TCP
-    - port: "5065"
+    - port: 5065
       protocol: TCP
-    - port: "5066"
+    - port: 5066
       protocol: TCP
-    - port: "5067"
+    - port: 5067
       protocol: TCP
-    - port: "5068"
-      protocol: TCP
-  - ports:
-    - port: "5075"
-      protocol: TCP
-    - port: "5076"
-      protocol: TCP
-    - port: "5077"
+    - port: 5068
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 5075
+      protocol: TCP
+    - port: 5076
+      protocol: TCP
+    - port: 5077
+      protocol: TCP
+  - ports:
+    - port: 135
       protocol: ""
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "808"
+    - port: 808
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "995"
+    - port: 995
       protocol: TCP
   - ports:
-    - port: "110"
+    - port: 110
       protocol: TCP
   - ports:
-    - port: "64327"
+    - port: 64327
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "993"
+    - port: 993
       protocol: TCP
   - ports:
-    - port: "143"
+    - port: 143
       protocol: TCP
   - ports:
-    - port: "5075"
+    - port: 5075
       protocol: TCP
-    - port: "5076"
+    - port: 5076
       protocol: TCP
-    - port: "5077"
-      protocol: TCP
-  - ports:
-    - port: "53"
+    - port: 5077
       protocol: TCP
   - ports:
-    - port: "5060"
-      protocol: TCP
-    - port: "5061"
-      protocol: TCP
-    - port: "5062"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "3268"
+    - port: 5060
+      protocol: TCP
+    - port: 5061
+      protocol: TCP
+    - port: 5062
       protocol: TCP
   - ports:
-    - port: "587"
+    - port: 3268
       protocol: TCP
   - ports:
-    - port: "25"
+    - port: 587
       protocol: TCP
   - ports:
-    - port: "50636"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 50636
+      protocol: TCP
+  - ports:
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -2400,7 +2400,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1755"
+    - port: 1755
       protocol: TCP
 
 ---
@@ -2417,7 +2417,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1755"
+    - port: 1755
       protocol: UDP
 
 ---
@@ -2434,28 +2434,28 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: TCP
   - ports:
-    - port: "2382"
+    - port: 2382
       protocol: TCP
   - ports:
-    - port: "2383"
+    - port: 2383
       protocol: TCP
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: UDP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
 
 ---
@@ -2472,7 +2472,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3306"
+    - port: 3306
       protocol: TCP
 
 ---
@@ -2489,7 +2489,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "138"
+    - port: 138
       protocol: UDP
 
 ---
@@ -2506,7 +2506,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "137"
+    - port: 137
       protocol: UDP
 
 ---
@@ -2523,7 +2523,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2049"
+    - port: 2049
       protocol: TCP
 
 ---
@@ -2540,7 +2540,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2049"
+    - port: 2049
       protocol: UDP
 
 ---
@@ -2557,7 +2557,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "111"
+    - port: 111
       protocol: TCP
 
 ---
@@ -2574,7 +2574,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "111"
+    - port: 111
       protocol: UDP
 
 ---
@@ -2591,7 +2591,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2049"
+    - port: 2049
       protocol: TCP
 
 ---
@@ -2608,7 +2608,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2049"
+    - port: 2049
       protocol: UDP
 
 ---
@@ -2625,7 +2625,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "119"
+    - port: 119
       protocol: TCP
 
 ---
@@ -2642,7 +2642,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "563"
+    - port: 563
       protocol: TCP
 
 ---
@@ -2659,7 +2659,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "123"
+    - port: 123
       protocol: UDP
 
 ---
@@ -2676,7 +2676,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "123"
+    - port: 123
       protocol: UDP
 
 ---
@@ -2693,7 +2693,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "138"
+    - port: 138
       protocol: TCP
 
 ---
@@ -2710,7 +2710,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "138"
+    - port: 138
       protocol: UDP
 
 ---
@@ -2727,7 +2727,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "137"
+    - port: 137
       protocol: TCP
 
 ---
@@ -2744,7 +2744,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "137"
+    - port: 137
       protocol: UDP
 
 ---
@@ -2761,7 +2761,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "139"
+    - port: 139
       protocol: TCP
 
 ---
@@ -2778,7 +2778,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "139"
+    - port: 139
       protocol: UDP
 
 ---
@@ -2795,7 +2795,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8888"
+    - port: 8888
       protocol: TCP
 
 ---
@@ -2812,7 +2812,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8889"
+    - port: 8889
       protocol: TCP
 
 ---
@@ -2829,7 +2829,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9000"
+    - port: 9000
       protocol: TCP
 
 ---
@@ -2846,7 +2846,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7777"
+    - port: 7777
       protocol: TCP
 
 ---
@@ -2863,7 +2863,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2100"
+    - port: 2100
       protocol: TCP
 
 ---
@@ -2880,7 +2880,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1521"
+    - port: 1521
       protocol: ""
 
 ---
@@ -2897,7 +2897,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "14000"
+    - port: 14000
       protocol: TCP
 
 ---
@@ -2914,9 +2914,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "56737"
+    - port: 56737
       protocol: TCP
-    - port: "56738"
+    - port: 56738
       protocol: TCP
 
 ---
@@ -2933,11 +2933,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5075"
+    - port: 5075
       protocol: TCP
-    - port: "5076"
+    - port: 5076
       protocol: TCP
-    - port: "5077"
+    - port: 5077
       protocol: TCP
 
 ---
@@ -2954,7 +2954,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1521"
+    - port: 1521
       protocol: TCP
 
 ---
@@ -2971,115 +2971,115 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4443"
+    - port: 4443
       protocol: TCP
   - ports:
-    - port: "3701"
+    - port: 3701
       protocol: TCP
   - ports:
-    - port: "6100"
+    - port: 6100
       protocol: TCP
   - ports:
-    - port: "3201"
+    - port: 3201
       protocol: TCP
   - ports:
-    - port: "7501"
+    - port: 7501
       protocol: TCP
   - ports:
-    - port: "4444"
+    - port: 4444
       protocol: TCP
   - ports:
-    - port: "4401"
+    - port: 4401
       protocol: TCP
   - ports:
-    - port: "3601"
+    - port: 3601
       protocol: TCP
   - ports:
-    - port: "1809"
+    - port: 1809
       protocol: TCP
   - ports:
-    - port: "3501"
+    - port: 3501
       protocol: TCP
   - ports:
-    - port: "9000"
+    - port: 9000
       protocol: TCP
   - ports:
-    - port: "7000"
+    - port: 7000
       protocol: TCP
   - ports:
-    - port: "4400"
+    - port: 4400
       protocol: TCP
   - ports:
-    - port: "6668"
+    - port: 6668
       protocol: TCP
   - ports:
-    - port: "636"
+    - port: 636
       protocol: TCP
   - ports:
-    - port: "4001"
+    - port: 4001
       protocol: TCP
   - ports:
-    - port: "3301"
+    - port: 3301
       protocol: TCP
   - ports:
-    - port: "6003"
+    - port: 6003
       protocol: TCP
   - ports:
-    - port: "14000"
+    - port: 14000
       protocol: TCP
   - ports:
-    - port: "3339"
+    - port: 3339
       protocol: TCP
   - ports:
-    - port: "9998"
+    - port: 9998
       protocol: TCP
   - ports:
-    - port: "7778"
+    - port: 7778
       protocol: TCP
   - ports:
-    - port: "4002"
+    - port: 4002
       protocol: TCP
   - ports:
-    - port: "8007"
+    - port: 8007
       protocol: TCP
   - ports:
-    - port: "4000"
+    - port: 4000
       protocol: TCP
   - ports:
-    - port: "1808"
+    - port: 1808
       protocol: TCP
   - ports:
-    - port: "7100"
+    - port: 7100
       protocol: TCP
   - ports:
-    - port: "7200"
+    - port: 7200
       protocol: TCP
   - ports:
-    - port: "7779"
+    - port: 7779
       protocol: TCP
   - ports:
-    - port: "6200"
+    - port: 6200
       protocol: TCP
   - ports:
-    - port: "1748"
+    - port: 1748
       protocol: TCP
   - ports:
-    - port: "7777"
+    - port: 7777
       protocol: TCP
   - ports:
-    - port: "1754"
+    - port: 1754
       protocol: TCP
   - ports:
-    - port: "4032"
+    - port: 4032
       protocol: TCP
   - ports:
-    - port: "3401"
+    - port: 3401
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "4031"
+    - port: 4031
       protocol: TCP
 
 ---
@@ -3096,7 +3096,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1630"
+    - port: 1630
       protocol: TCP
 
 ---
@@ -3113,7 +3113,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1830"
+    - port: 1830
       protocol: TCP
 
 ---
@@ -3130,25 +3130,25 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1521"
+    - port: 1521
       protocol: TCP
   - ports:
-    - port: "2100"
+    - port: 2100
       protocol: TCP
   - ports:
-    - port: "2482"
+    - port: 2482
       protocol: TCP
   - ports:
-    - port: "1575"
+    - port: 1575
       protocol: TCP
   - ports:
-    - port: "8080"
+    - port: 8080
       protocol: TCP
   - ports:
-    - port: "2481"
+    - port: 2481
       protocol: TCP
   - ports:
-    - port: "1526"
+    - port: 1526
       protocol: TCP
 
 ---
@@ -3165,16 +3165,16 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1831"
+    - port: 1831
       protocol: TCP
   - ports:
-    - port: "1810"
+    - port: 1810
       protocol: TCP
   - ports:
-    - port: "1850"
+    - port: 1850
       protocol: TCP
   - ports:
-    - port: "44000"
+    - port: 44000
       protocol: TCP
 
 ---
@@ -3191,7 +3191,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5500"
+    - port: 5500
       protocol: TCP
 
 ---
@@ -3208,7 +3208,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5500"
+    - port: 5500
       protocol: TCP
 
 ---
@@ -3225,7 +3225,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9000"
+    - port: 9000
       protocol: TCP
 
 ---
@@ -3242,7 +3242,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2481"
+    - port: 2481
       protocol: TCP
 
 ---
@@ -3259,7 +3259,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2482"
+    - port: 2482
       protocol: TCP
 
 ---
@@ -3276,7 +3276,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7200"
+    - port: 7200
       protocol: TCP
 
 ---
@@ -3293,7 +3293,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8007"
+    - port: 8007
       protocol: TCP
 
 ---
@@ -3310,7 +3310,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7501"
+    - port: 7501
       protocol: TCP
 
 ---
@@ -3327,7 +3327,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4443"
+    - port: 4443
       protocol: TCP
 
 ---
@@ -3344,7 +3344,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7778"
+    - port: 7778
       protocol: TCP
 
 ---
@@ -3361,7 +3361,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7777"
+    - port: 7777
       protocol: TCP
 
 ---
@@ -3378,7 +3378,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1748"
+    - port: 1748
       protocol: TCP
 
 ---
@@ -3395,7 +3395,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1754"
+    - port: 1754
       protocol: TCP
 
 ---
@@ -3412,7 +3412,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1808"
+    - port: 1808
       protocol: TCP
 
 ---
@@ -3429,7 +3429,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1809"
+    - port: 1809
       protocol: TCP
 
 ---
@@ -3446,7 +3446,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "636"
+    - port: 636
       protocol: TCP
 
 ---
@@ -3463,7 +3463,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4031"
+    - port: 4031
       protocol: TCP
 
 ---
@@ -3480,7 +3480,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
 
 ---
@@ -3497,7 +3497,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4032"
+    - port: 4032
       protocol: TCP
 
 ---
@@ -3514,7 +3514,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1701"
+    - port: 1701
       protocol: TCP
 
 ---
@@ -3531,7 +3531,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1575"
+    - port: 1575
       protocol: TCP
 
 ---
@@ -3548,7 +3548,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1526"
+    - port: 1526
       protocol: TCP
 
 ---
@@ -3565,7 +3565,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1521"
+    - port: 1521
       protocol: TCP
 
 ---
@@ -3582,7 +3582,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "6100"
+    - port: 6100
       protocol: TCP
 
 ---
@@ -3599,7 +3599,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "6200"
+    - port: 6200
       protocol: TCP
 
 ---
@@ -3616,7 +3616,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "6003"
+    - port: 6003
       protocol: TCP
 
 ---
@@ -3633,7 +3633,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3301"
+    - port: 3301
       protocol: TCP
 
 ---
@@ -3650,7 +3650,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3401"
+    - port: 3401
       protocol: TCP
 
 ---
@@ -3667,7 +3667,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3501"
+    - port: 3501
       protocol: TCP
 
 ---
@@ -3684,7 +3684,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3601"
+    - port: 3601
       protocol: TCP
 
 ---
@@ -3701,7 +3701,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3701"
+    - port: 3701
       protocol: TCP
 
 ---
@@ -3718,7 +3718,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3201"
+    - port: 3201
       protocol: TCP
 
 ---
@@ -3735,7 +3735,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1701"
+    - port: 1701
       protocol: TCP
 
 ---
@@ -3752,7 +3752,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9998"
+    - port: 9998
       protocol: TCP
 
 ---
@@ -3769,34 +3769,34 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4767"
+    - port: 4767
       protocol: TCP
   - ports:
-    - port: "15000"
+    - port: 15000
       protocol: TCP
   - ports:
-    - port: "4758"
+    - port: 4758
       protocol: TCP
   - ports:
-    - port: "4759"
+    - port: 4759
       protocol: TCP
   - ports:
-    - port: "4764"
+    - port: 4764
       protocol: TCP
   - ports:
-    - port: "4766"
+    - port: 4766
       protocol: TCP
   - ports:
-    - port: "4761"
+    - port: 4761
       protocol: TCP
   - ports:
-    - port: "4662"
+    - port: 4662
       protocol: TCP
   - ports:
-    - port: "15004"
+    - port: 15004
       protocol: TCP
   - ports:
-    - port: "15002"
+    - port: 15002
       protocol: TCP
 
 ---
@@ -3813,7 +3813,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "15000"
+    - port: 15000
       protocol: TCP
 
 ---
@@ -3830,7 +3830,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "15002"
+    - port: 15002
       protocol: TCP
 
 ---
@@ -3847,7 +3847,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "15004"
+    - port: 15004
       protocol: TCP
 
 ---
@@ -3864,7 +3864,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4662"
+    - port: 4662
       protocol: TCP
 
 ---
@@ -3881,7 +3881,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4758"
+    - port: 4758
       protocol: TCP
 
 ---
@@ -3898,7 +3898,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4759"
+    - port: 4759
       protocol: TCP
 
 ---
@@ -3915,7 +3915,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4761"
+    - port: 4761
       protocol: TCP
 
 ---
@@ -3932,7 +3932,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4764"
+    - port: 4764
       protocol: TCP
 
 ---
@@ -3949,7 +3949,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4766"
+    - port: 4766
       protocol: TCP
 
 ---
@@ -3966,7 +3966,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4767"
+    - port: 4767
       protocol: TCP
 
 ---
@@ -3983,7 +3983,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2100"
+    - port: 2100
       protocol: TCP
 
 ---
@@ -4000,7 +4000,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8080"
+    - port: 8080
       protocol: TCP
 
 ---
@@ -4017,10 +4017,10 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5560"
+    - port: 5560
       protocol: TCP
   - ports:
-    - port: "5580"
+    - port: 5580
       protocol: TCP
 
 ---
@@ -4037,7 +4037,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1526"
+    - port: 1526
       protocol: TCP
 
 ---
@@ -4054,7 +4054,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "6668"
+    - port: 6668
       protocol: TCP
 
 ---
@@ -4071,7 +4071,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4000"
+    - port: 4000
       protocol: TCP
 
 ---
@@ -4088,7 +4088,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4444"
+    - port: 4444
       protocol: TCP
 
 ---
@@ -4105,7 +4105,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7779"
+    - port: 7779
       protocol: TCP
 
 ---
@@ -4122,7 +4122,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4001"
+    - port: 4001
       protocol: TCP
 
 ---
@@ -4139,7 +4139,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4002"
+    - port: 4002
       protocol: TCP
 
 ---
@@ -4156,7 +4156,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4401"
+    - port: 4401
       protocol: TCP
 
 ---
@@ -4173,7 +4173,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4400"
+    - port: 4400
       protocol: TCP
 
 ---
@@ -4190,55 +4190,55 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "8281"
+    - port: 8281
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "8230"
+    - port: 8230
       protocol: TCP
   - ports:
-    - port: "5432"
+    - port: 5432
       protocol: TCP
   - ports:
-    - port: "8240"
+    - port: 8240
       protocol: TCP
   - ports:
-    - port: "8283"
+    - port: 8283
       protocol: TCP
   - ports:
-    - port: "1521"
+    - port: 1521
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "636"
+    - port: 636
       protocol: TCP
   - ports:
-    - port: "8282"
+    - port: 8282
       protocol: TCP
   - ports:
-    - port: "8244"
+    - port: 8244
       protocol: TCP
   - ports:
-    - port: "8250"
+    - port: 8250
       protocol: TCP
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "3306"
+    - port: 3306
       protocol: TCP
   - ports:
-    - port: "8280"
+    - port: 8280
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
 
 ---
@@ -4255,7 +4255,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5631"
+    - port: 5631
       protocol: TCP
 
 ---
@@ -4272,7 +4272,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5632"
+    - port: 5632
       protocol: UDP
 
 ---
@@ -4289,7 +4289,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "110"
+    - port: 110
       protocol: TCP
 
 ---
@@ -4306,7 +4306,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "995"
+    - port: 995
       protocol: TCP
 
 ---
@@ -4323,7 +4323,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5432"
+    - port: 5432
       protocol: TCP
 
 ---
@@ -4340,7 +4340,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3389"
+    - port: 3389
       protocol: TCP
 
 ---
@@ -4357,7 +4357,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 5900-5964
+    - port: 0
       protocol: TCP
 
 ---
@@ -4374,7 +4374,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5722"
+    - port: 5722
       protocol: TCP
 
 ---
@@ -4391,7 +4391,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "554"
+    - port: 554
       protocol: TCP
 
 ---
@@ -4408,7 +4408,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "554"
+    - port: 554
       protocol: UDP
 
 ---
@@ -4425,7 +4425,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "691"
+    - port: 691
       protocol: TCP
 
 ---
@@ -4442,7 +4442,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "20005"
+    - port: 20005
       protocol: TCP
 
 ---
@@ -4459,7 +4459,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30011"
+    - port: 30011
       protocol: TCP
 
 ---
@@ -4476,7 +4476,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30017"
+    - port: 30017
       protocol: TCP
 
 ---
@@ -4493,7 +4493,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1095"
+    - port: 1095
       protocol: TCP
 
 ---
@@ -4510,7 +4510,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "20201"
+    - port: 20201
       protocol: TCP
 
 ---
@@ -4527,7 +4527,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "20003"
+    - port: 20003
       protocol: TCP
 
 ---
@@ -4544,7 +4544,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1090"
+    - port: 1090
       protocol: TCP
 
 ---
@@ -4561,7 +4561,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30008"
+    - port: 30008
       protocol: TCP
 
 ---
@@ -4578,7 +4578,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50015"
+    - port: 50015
       protocol: TCP
 
 ---
@@ -4595,7 +4595,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3200"
+    - port: 3200
       protocol: TCP
 
 ---
@@ -4612,7 +4612,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3200"
+    - port: 3200
       protocol: UDP
 
 ---
@@ -4629,7 +4629,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50116"
+    - port: 50116
       protocol: TCP
 
 ---
@@ -4646,7 +4646,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3201"
+    - port: 3201
       protocol: TCP
 
 ---
@@ -4663,7 +4663,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "135"
+    - port: 135
       protocol: TCP
 
 ---
@@ -4680,7 +4680,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8230"
+    - port: 8230
       protocol: TCP
 
 ---
@@ -4697,7 +4697,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30006"
+    - port: 30006
       protocol: TCP
 
 ---
@@ -4714,7 +4714,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3300"
+    - port: 3300
       protocol: UDP
 
 ---
@@ -4731,7 +4731,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50000"
+    - port: 50000
       protocol: TCP
 
 ---
@@ -4748,7 +4748,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30005"
+    - port: 30005
       protocol: TCP
 
 ---
@@ -4765,7 +4765,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8353"
+    - port: 8353
       protocol: TCP
 
 ---
@@ -4782,7 +4782,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50001"
+    - port: 50001
       protocol: TCP
 
 ---
@@ -4799,7 +4799,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1128"
+    - port: 1128
       protocol: TCP
 
 ---
@@ -4816,7 +4816,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1129"
+    - port: 1129
       protocol: TCP
 
 ---
@@ -4833,9 +4833,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50000"
+    - port: 50000
       protocol: TCP
-    - port: "4402"
+    - port: 4402
       protocol: TCP
 
 ---
@@ -4852,7 +4852,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8000"
+    - port: 8000
       protocol: TCP
 
 ---
@@ -4869,7 +4869,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50007"
+    - port: 50007
       protocol: TCP
 
 ---
@@ -4886,7 +4886,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50002"
+    - port: 50002
       protocol: TCP
 
 ---
@@ -4903,7 +4903,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50003"
+    - port: 50003
       protocol: TCP
 
 ---
@@ -4920,7 +4920,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4444"
+    - port: 4444
       protocol: TCP
 
 ---
@@ -4937,7 +4937,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4363"
+    - port: 4363
       protocol: TCP
 
 ---
@@ -4954,7 +4954,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9999"
+    - port: 9999
       protocol: TCP
 
 ---
@@ -4971,7 +4971,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4445"
+    - port: 4445
       protocol: TCP
 
 ---
@@ -4988,7 +4988,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "20006"
+    - port: 20006
       protocol: TCP
 
 ---
@@ -5005,7 +5005,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30003"
+    - port: 30003
       protocol: TCP
 
 ---
@@ -5022,7 +5022,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8351"
+    - port: 8351
       protocol: TCP
 
 ---
@@ -5039,9 +5039,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "21212"
+    - port: 21212
       protocol: TCP
-    - port: "21213"
+    - port: 21213
       protocol: TCP
 
 ---
@@ -5058,9 +5058,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "59975"
+    - port: 59975
       protocol: TCP
-    - port: "59976"
+    - port: 59976
       protocol: TCP
 
 ---
@@ -5077,7 +5077,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "20004"
+    - port: 20004
       protocol: TCP
 
 ---
@@ -5094,7 +5094,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8220"
+    - port: 8220
       protocol: TCP
 
 ---
@@ -5111,7 +5111,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50010"
+    - port: 50010
       protocol: TCP
 
 ---
@@ -5128,7 +5128,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8210"
+    - port: 8210
       protocol: TCP
 
 ---
@@ -5145,7 +5145,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8200"
+    - port: 8200
       protocol: TCP
 
 ---
@@ -5162,7 +5162,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50021"
+    - port: 50021
       protocol: TCP
 
 ---
@@ -5179,7 +5179,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50020"
+    - port: 50020
       protocol: TCP
 
 ---
@@ -5196,11 +5196,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "31596"
+    - port: 31596
       protocol: TCP
-    - port: "31597"
+    - port: 31597
       protocol: TCP
-    - port: "31604"
+    - port: 31604
       protocol: TCP
 
 ---
@@ -5217,7 +5217,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "31596"
+    - port: 31596
       protocol: TCP
 
 ---
@@ -5234,7 +5234,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "31603"
+    - port: 31603
       protocol: TCP
 
 ---
@@ -5251,7 +5251,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "31602"
+    - port: 31602
       protocol: TCP
 
 ---
@@ -5268,15 +5268,15 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7200"
+    - port: 7200
       protocol: TCP
-    - port: "7210"
+    - port: 7210
       protocol: TCP
-    - port: "7269"
+    - port: 7269
       protocol: TCP
-    - port: "7270"
+    - port: 7270
       protocol: TCP
-    - port: "7575"
+    - port: 7575
       protocol: TCP
 
 ---
@@ -5293,7 +5293,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 62026-62029
+    - port: 0
       protocol: TCP
 
 ---
@@ -5310,7 +5310,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 62126-62129
+    - port: 0
       protocol: TCP
 
 ---
@@ -5327,7 +5327,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 2000-2002
+    - port: 0
       protocol: TCP
 
 ---
@@ -5344,7 +5344,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3909"
+    - port: 3909
       protocol: TCP
 
 ---
@@ -5361,7 +5361,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8100"
+    - port: 8100
       protocol: TCP
 
 ---
@@ -5378,7 +5378,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8366"
+    - port: 8366
       protocol: TCP
 
 ---
@@ -5395,7 +5395,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3600"
+    - port: 3600
       protocol: TCP
 
 ---
@@ -5412,7 +5412,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3601"
+    - port: 3601
       protocol: TCP
 
 ---
@@ -5429,7 +5429,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8101"
+    - port: 8101
       protocol: TCP
 
 ---
@@ -5446,7 +5446,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30001"
+    - port: 30001
       protocol: TCP
 
 ---
@@ -5463,7 +5463,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8355"
+    - port: 8355
       protocol: TCP
 
 ---
@@ -5480,7 +5480,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1527"
+    - port: 1527
       protocol: TCP
 
 ---
@@ -5497,7 +5497,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50004"
+    - port: 50004
       protocol: TCP
 
 ---
@@ -5514,7 +5514,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50005"
+    - port: 50005
       protocol: TCP
 
 ---
@@ -5531,7 +5531,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50006"
+    - port: 50006
       protocol: TCP
 
 ---
@@ -5548,7 +5548,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1099"
+    - port: 1099
       protocol: TCP
 
 ---
@@ -5565,7 +5565,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1089"
+    - port: 1089
       protocol: TCP
 
 ---
@@ -5582,7 +5582,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30002"
+    - port: 30002
       protocol: TCP
 
 ---
@@ -5599,7 +5599,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8357"
+    - port: 8357
       protocol: TCP
 
 ---
@@ -5616,7 +5616,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30004"
+    - port: 30004
       protocol: TCP
 
 ---
@@ -5633,7 +5633,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8352"
+    - port: 8352
       protocol: TCP
 
 ---
@@ -5650,7 +5650,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "30007"
+    - port: 30007
       protocol: TCP
 
 ---
@@ -5667,7 +5667,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3299"
+    - port: 3299
       protocol: TCP
 
 ---
@@ -5684,11 +5684,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50017"
+    - port: 50017
       protocol: TCP
-    - port: "50018"
+    - port: 50018
       protocol: TCP
-    - port: "50019"
+    - port: 50019
       protocol: TCP
 
 ---
@@ -5705,7 +5705,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4800"
+    - port: 4800
       protocol: TCP
 
 ---
@@ -5722,7 +5722,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50013"
+    - port: 50013
       protocol: TCP
 
 ---
@@ -5739,7 +5739,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50014"
+    - port: 50014
       protocol: TCP
 
 ---
@@ -5756,7 +5756,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "20007"
+    - port: 20007
       protocol: TCP
 
 ---
@@ -5773,7 +5773,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "50008"
+    - port: 50008
       protocol: TCP
 
 ---
@@ -5790,13 +5790,13 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4238"
+    - port: 4238
       protocol: TCP
-    - port: "4239"
+    - port: 4239
       protocol: TCP
-    - port: "4240"
+    - port: 4240
       protocol: TCP
-    - port: "4241"
+    - port: 4241
       protocol: TCP
 
 ---
@@ -5813,7 +5813,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3300"
+    - port: 3300
       protocol: TCP
 
 ---
@@ -5830,7 +5830,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3301"
+    - port: 3301
       protocol: TCP
 
 ---
@@ -5847,7 +5847,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3298"
+    - port: 3298
       protocol: TCP
 
 ---
@@ -5864,7 +5864,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "515"
+    - port: 515
       protocol: TCP
 
 ---
@@ -5881,7 +5881,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5060"
+    - port: 5060
       protocol: UDP
 
 ---
@@ -5898,7 +5898,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5061"
+    - port: 5061
       protocol: UDP
 
 ---
@@ -5915,7 +5915,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
 
 ---
@@ -5932,7 +5932,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
 
 ---
@@ -5949,7 +5949,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "445"
+    - port: 445
       protocol: UDP
 
 ---
@@ -5966,7 +5966,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
 
 ---
@@ -5983,7 +5983,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "587"
+    - port: 587
       protocol: TCP
 
 ---
@@ -6000,7 +6000,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "161"
+    - port: 161
       protocol: UDP
 
 ---
@@ -6017,7 +6017,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "161"
+    - port: 161
       protocol: UDP
 
 ---
@@ -6034,7 +6034,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "162"
+    - port: 162
       protocol: UDP
 
 ---
@@ -6051,7 +6051,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9389"
+    - port: 9389
       protocol: TCP
 
 ---
@@ -6068,7 +6068,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2383"
+    - port: 2383
       protocol: TCP
 
 ---
@@ -6085,7 +6085,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2382"
+    - port: 2382
       protocol: TCP
 
 ---
@@ -6102,7 +6102,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "22"
+    - port: 22
       protocol: TCP
 
 ---
@@ -6119,7 +6119,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "111"
+    - port: 111
       protocol: ""
 
 ---
@@ -6136,7 +6136,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "111"
+    - port: 111
       protocol: ""
 
 ---
@@ -6153,11 +6153,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "137"
+    - port: 137
       protocol: TCP
-    - port: "138"
+    - port: 138
       protocol: TCP
-    - port: "139"
+    - port: 139
       protocol: TCP
 
 ---
@@ -6174,67 +6174,67 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "137"
+    - port: 137
       protocol: TCP
-    - port: "138"
+    - port: 138
       protocol: TCP
-    - port: "139"
-      protocol: TCP
-  - ports:
-    - port: "445"
+    - port: 139
       protocol: TCP
   - ports:
-    - port: "56737"
-      protocol: TCP
-    - port: "56738"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 56737
+      protocol: TCP
+    - port: 56738
+      protocol: TCP
+  - ports:
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "137"
+    - port: 137
       protocol: UDP
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: UDP
   - ports:
-    - port: "138"
+    - port: 138
       protocol: UDP
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "636"
+    - port: 636
       protocol: UDP
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "3389"
+    - port: 3389
       protocol: TCP
 
 ---
@@ -6251,80 +6251,80 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "25"
+    - port: 25
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "5725"
+    - port: 5725
       protocol: TCP
   - ports:
-    - port: "137"
+    - port: 137
       protocol: UDP
   - ports:
-    - port: "3389"
+    - port: 3389
       protocol: TCP
   - ports:
-    - port: "1434"
+    - port: 1434
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: UDP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "636"
+    - port: 636
       protocol: UDP
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "464"
+    - port: 464
       protocol: UDP
   - ports:
-    - port: "56737"
+    - port: 56737
       protocol: TCP
-    - port: "56738"
-      protocol: TCP
-  - ports:
-    - port: "32843"
-      protocol: TCP
-    - port: "32844"
-      protocol: TCP
-    - port: "32845"
+    - port: 56738
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 32843
+      protocol: TCP
+    - port: 32844
+      protocol: TCP
+    - port: 32845
+      protocol: TCP
+  - ports:
+    - port: 135
       protocol: ""
   - ports:
-    - port: "445"
+    - port: 445
       protocol: UDP
   - ports:
-    - port: "137"
+    - port: 137
       protocol: TCP
-    - port: "138"
+    - port: 138
       protocol: TCP
-    - port: "139"
+    - port: 139
       protocol: TCP
   - ports:
-    - port: "138"
+    - port: 138
       protocol: UDP
 
 ---
@@ -6341,60 +6341,60 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "8096"
+    - port: 8096
       protocol: TCP
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "902"
+    - port: 902
       protocol: TCP
   - ports:
-    - port: "5480"
+    - port: 5480
       protocol: TCP
   - ports:
-    - port: "9008"
+    - port: 9008
       protocol: TCP
   - ports:
-    - port: "31031"
+    - port: 31031
       protocol: TCP
-    - port: "44046"
-      protocol: TCP
-  - ports:
-    - port: "8095"
+    - port: 44046
       protocol: TCP
   - ports:
-    - port: "8080"
+    - port: 8095
       protocol: TCP
   - ports:
-    - port: "8282"
+    - port: 8080
       protocol: TCP
   - ports:
-    - port: "1521"
+    - port: 8282
       protocol: TCP
   - ports:
-    - port: "8043"
+    - port: 1521
       protocol: TCP
   - ports:
-    - port: "8123"
+    - port: 8043
       protocol: TCP
   - ports:
-    - port: "5000"
+    - port: 8123
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 5000
       protocol: TCP
   - ports:
-    - port: "1526"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "9007"
+    - port: 1526
       protocol: TCP
   - ports:
-    - port: "9085"
+    - port: 9007
+      protocol: TCP
+  - ports:
+    - port: 9085
       protocol: TCP
 
 ---
@@ -6411,74 +6411,74 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9007"
+    - port: 9007
       protocol: TCP
   - ports:
-    - port: "8043"
+    - port: 8043
       protocol: TCP
   - ports:
-    - port: "9008"
+    - port: 9008
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "9085"
+    - port: 9085
       protocol: TCP
   - ports:
-    - port: "9086"
+    - port: 9086
       protocol: TCP
   - ports:
-    - port: "5000"
+    - port: 5000
       protocol: TCP
   - ports:
-    - port: "5480"
+    - port: 5480
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "8080"
+    - port: 8080
       protocol: TCP
   - ports:
-    - port: "8043"
+    - port: 8043
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "902"
+    - port: 902
       protocol: TCP
   - ports:
-    - port: "1526"
+    - port: 1526
       protocol: TCP
   - ports:
-    - port: "8282"
+    - port: 8282
       protocol: TCP
   - ports:
-    - port: "31031"
+    - port: 31031
       protocol: TCP
-    - port: "44046"
-      protocol: TCP
-  - ports:
-    - port: "31031"
-      protocol: TCP
-    - port: "44046"
+    - port: 44046
       protocol: TCP
   - ports:
-    - port: "1433"
+    - port: 31031
+      protocol: TCP
+    - port: 44046
       protocol: TCP
   - ports:
-    - port: "8095"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "1521"
+    - port: 8095
       protocol: TCP
   - ports:
-    - port: "8123"
+    - port: 1521
       protocol: TCP
   - ports:
-    - port: "8096"
+    - port: 8123
+      protocol: TCP
+  - ports:
+    - port: 8096
       protocol: TCP
 
 ---
@@ -6495,7 +6495,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "379"
+    - port: 379
       protocol: TCP
 
 ---
@@ -6512,7 +6512,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "2000"
+    - port: 2000
       protocol: TCP
 
 ---
@@ -6529,7 +6529,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "514"
+    - port: 514
       protocol: TCP
 
 ---
@@ -6546,7 +6546,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "514"
+    - port: 514
       protocol: UDP
 
 ---
@@ -6563,7 +6563,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "514"
+    - port: 514
       protocol: TCP
 
 ---
@@ -6580,7 +6580,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "514"
+    - port: 514
       protocol: UDP
 
 ---
@@ -6597,7 +6597,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1503"
+    - port: 1503
       protocol: TCP
 
 ---
@@ -6614,7 +6614,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "23"
+    - port: 23
       protocol: TCP
 
 ---
@@ -6631,7 +6631,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "69"
+    - port: 69
       protocol: ""
 
 ---
@@ -6648,7 +6648,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3389"
+    - port: 3389
       protocol: TCP
 
 ---
@@ -6665,7 +6665,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3389"
+    - port: 3389
       protocol: UDP
 
 ---
@@ -6682,34 +6682,34 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "735"
+    - port: 735
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "9087"
+    - port: 9087
       protocol: TCP
   - ports:
-    - port: "1521"
+    - port: 1521
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: 9000-9100
+    - port: 0
       protocol: TCP
   - ports:
-    - port: "9084"
+    - port: 9084
       protocol: TCP
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "8084"
+    - port: 8084
       protocol: TCP
   - ports:
-    - port: "902"
+    - port: 902
       protocol: TCP
 
 ---
@@ -6726,7 +6726,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -6743,10 +6743,10 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8000"
+    - port: 8000
       protocol: TCP
   - ports:
-    - port: "6500"
+    - port: 6500
       protocol: UDP
 
 ---
@@ -6763,7 +6763,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8000"
+    - port: 8000
       protocol: TCP
 
 ---
@@ -6780,7 +6780,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "427"
+    - port: 427
       protocol: UDP
 
 ---
@@ -6797,9 +6797,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8301"
+    - port: 8301
       protocol: TCP
-    - port: "8302"
+    - port: 8302
       protocol: TCP
 
 ---
@@ -6816,7 +6816,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "22024"
+    - port: 22024
       protocol: TCP
 
 ---
@@ -6833,7 +6833,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "902"
+    - port: 902
       protocol: TCP
 
 ---
@@ -6850,7 +6850,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "902"
+    - port: 902
       protocol: UDP
 
 ---
@@ -6867,7 +6867,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8182"
+    - port: 8182
       protocol: TCP
 
 ---
@@ -6884,7 +6884,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8182"
+    - port: 8182
       protocol: UDP
 
 ---
@@ -6901,9 +6901,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "31100"
+    - port: 31100
       protocol: TCP
-    - port: "31000"
+    - port: 31000
       protocol: TCP
 
 ---
@@ -6920,7 +6920,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -6937,7 +6937,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9008"
+    - port: 9008
       protocol: TCP
 
 ---
@@ -6954,7 +6954,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8123"
+    - port: 8123
       protocol: TCP
 
 ---
@@ -6971,7 +6971,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8043"
+    - port: 8043
       protocol: TCP
 
 ---
@@ -6988,7 +6988,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9086"
+    - port: 9086
       protocol: TCP
 
 ---
@@ -7005,7 +7005,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9085"
+    - port: 9085
       protocol: TCP
 
 ---
@@ -7022,7 +7022,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8080"
+    - port: 8080
       protocol: TCP
 
 ---
@@ -7039,7 +7039,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8096"
+    - port: 8096
       protocol: TCP
 
 ---
@@ -7056,9 +7056,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "31031"
+    - port: 31031
       protocol: TCP
-    - port: "44046"
+    - port: 44046
       protocol: TCP
 
 ---
@@ -7075,7 +7075,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8095"
+    - port: 8095
       protocol: TCP
 
 ---
@@ -7092,7 +7092,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 9000-9100
+    - port: 0
       protocol: TCP
 
 ---
@@ -7109,7 +7109,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "735"
+    - port: 735
       protocol: TCP
 
 ---
@@ -7126,7 +7126,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8084"
+    - port: 8084
       protocol: TCP
 
 ---
@@ -7143,7 +7143,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9084"
+    - port: 9084
       protocol: TCP
 
 ---
@@ -7160,7 +7160,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "623"
+    - port: 623
       protocol: UDP
 
 ---
@@ -7177,7 +7177,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8000"
+    - port: 8000
       protocol: TCP
 
 ---
@@ -7194,7 +7194,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "6500"
+    - port: 6500
       protocol: UDP
 
 ---
@@ -7211,7 +7211,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "51915"
+    - port: 51915
       protocol: TCP
 
 ---
@@ -7228,7 +7228,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "903"
+    - port: 903
       protocol: TCP
 
 ---
@@ -7245,7 +7245,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8001"
+    - port: 8001
       protocol: TCP
 
 ---
@@ -7262,7 +7262,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8240"
+    - port: 8240
       protocol: TCP
 
 ---
@@ -7279,7 +7279,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8244"
+    - port: 8244
       protocol: TCP
 
 ---
@@ -7296,7 +7296,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8250"
+    - port: 8250
       protocol: TCP
 
 ---
@@ -7313,7 +7313,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8283"
+    - port: 8283
       protocol: TCP
 
 ---
@@ -7330,7 +7330,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8280"
+    - port: 8280
       protocol: TCP
 
 ---
@@ -7347,7 +7347,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8281"
+    - port: 8281
       protocol: TCP
 
 ---
@@ -7364,7 +7364,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1194"
+    - port: 1194
       protocol: TCP
 
 ---
@@ -7381,7 +7381,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "1199"
+    - port: 1199
       protocol: TCP
 
 ---
@@ -7398,7 +7398,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 1024-65535
+    - port: 0
       protocol: TCP
 
 ---
@@ -7415,7 +7415,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "42966"
+    - port: 42966
       protocol: TCP
 
 ---
@@ -7432,9 +7432,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "31031"
+    - port: 31031
       protocol: TCP
-    - port: "44046"
+    - port: 44046
       protocol: TCP
 
 ---
@@ -7451,7 +7451,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8043"
+    - port: 8043
       protocol: TCP
 
 ---
@@ -7468,7 +7468,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4172"
+    - port: 4172
       protocol: TCP
 
 ---
@@ -7485,7 +7485,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4001"
+    - port: 4001
       protocol: TCP
 
 ---
@@ -7502,7 +7502,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4172"
+    - port: 4172
       protocol: UDP
 
 ---
@@ -7519,7 +7519,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3260"
+    - port: 3260
       protocol: TCP
 
 ---
@@ -7536,22 +7536,22 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4172"
+    - port: 4172
       protocol: TCP
   - ports:
-    - port: "4172"
+    - port: 4172
       protocol: UDP
   - ports:
-    - port: "902"
+    - port: 902
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "4001"
+    - port: 4001
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
 ---
@@ -7568,46 +7568,46 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3389"
+    - port: 3389
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "4001"
+    - port: 4001
       protocol: TCP
   - ports:
-    - port: 1024-65535
+    - port: 0
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "4100"
+    - port: 4100
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: TCP
   - ports:
-    - port: "445"
+    - port: 445
       protocol: UDP
   - ports:
-    - port: "8009"
+    - port: 8009
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "42966"
+    - port: 42966
       protocol: TCP
 
 ---
@@ -7624,9 +7624,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8100"
+    - port: 8100
       protocol: TCP
-    - port: "8200"
+    - port: 8200
       protocol: TCP
 
 ---
@@ -7643,9 +7643,9 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8100"
+    - port: 8100
       protocol: UDP
-    - port: "8200"
+    - port: 8200
       protocol: UDP
 
 ---
@@ -7662,7 +7662,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "57348"
+    - port: 57348
       protocol: TCP
 
 ---
@@ -7679,7 +7679,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9007"
+    - port: 9007
       protocol: TCP
 
 ---
@@ -7696,7 +7696,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "9087"
+    - port: 9087
       protocol: TCP
 
 ---
@@ -7713,7 +7713,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "10080"
+    - port: 10080
       protocol: TCP
 
 ---
@@ -7730,27 +7730,27 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "7500"
+    - port: 7500
       protocol: TCP
-    - port: "8005"
+    - port: 8005
       protocol: TCP
-    - port: "8006"
+    - port: 8006
       protocol: TCP
-    - port: "8083"
+    - port: 8083
       protocol: TCP
-    - port: "8085"
+    - port: 8085
       protocol: TCP
-    - port: "8086"
+    - port: 8086
       protocol: TCP
-    - port: "8087"
+    - port: 8087
       protocol: TCP
-    - port: "8443"
+    - port: 8443
       protocol: TCP
-    - port: "10109"
+    - port: 10109
       protocol: TCP
-    - port: "10111"
+    - port: 10111
       protocol: TCP
-    - port: "60099"
+    - port: 60099
       protocol: TCP
 
 ---
@@ -7767,11 +7767,11 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8443"
+    - port: 8443
       protocol: TCP
-    - port: "9443"
+    - port: 9443
       protocol: TCP
-    - port: "10443"
+    - port: 10443
       protocol: TCP
 
 ---
@@ -7788,7 +7788,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "52267"
+    - port: 52267
       protocol: TCP
 
 ---
@@ -7805,7 +7805,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8230"
+    - port: 8230
       protocol: TCP
 
 ---
@@ -7822,7 +7822,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8282"
+    - port: 8282
       protocol: TCP
 
 ---
@@ -7839,7 +7839,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "61616"
+    - port: 61616
       protocol: TCP
 
 ---
@@ -7856,7 +7856,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "8009"
+    - port: 8009
       protocol: TCP
 
 ---
@@ -7873,7 +7873,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "4100"
+    - port: 4100
       protocol: TCP
 
 ---
@@ -7890,7 +7890,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "42"
+    - port: 42
       protocol: TCP
 
 ---
@@ -7907,7 +7907,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "42"
+    - port: 42
       protocol: UDP
 
 ---
@@ -7924,7 +7924,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 1025-65535
+    - port: 0
       protocol: TCP
 
 ---
@@ -7941,7 +7941,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 1025-65535
+    - port: 0
       protocol: UDP
 
 ---
@@ -7958,7 +7958,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 1025-5000
+    - port: 0
       protocol: TCP
 
 ---
@@ -7975,7 +7975,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: 49152-65535
+    - port: 0
       protocol: TCP
 
 ---
@@ -7992,7 +7992,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3268"
+    - port: 3268
       protocol: TCP
 
 ---
@@ -8009,7 +8009,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "3269"
+    - port: 3269
       protocol: TCP
 
 ---
@@ -8026,7 +8026,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5050"
+    - port: 5050
       protocol: TCP
 
 ---
@@ -8043,7 +8043,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5050"
+    - port: 5050
       protocol: UDP
 
 ---
@@ -8060,7 +8060,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5560"
+    - port: 5560
       protocol: TCP
 
 ---
@@ -8077,7 +8077,7 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5580"
+    - port: 5580
       protocol: TCP
 
 ---
@@ -8094,106 +8094,106 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "902"
+    - port: 902
       protocol: UDP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: TCP
   - ports:
-    - port: "161"
+    - port: 161
       protocol: UDP
   - ports:
-    - port: "51915"
+    - port: 51915
       protocol: TCP
   - ports:
-    - port: "1433"
+    - port: 1433
       protocol: TCP
   - ports:
-    - port: "162"
+    - port: 162
       protocol: UDP
   - ports:
-    - port: "8443"
+    - port: 8443
       protocol: TCP
-    - port: "9443"
+    - port: 9443
       protocol: TCP
-    - port: "10443"
-      protocol: TCP
-  - ports:
-    - port: "10080"
+    - port: 10443
       protocol: TCP
   - ports:
-    - port: "1434"
+    - port: 10080
+      protocol: TCP
+  - ports:
+    - port: 1434
       protocol: UDP
   - ports:
-    - port: "389"
+    - port: 389
       protocol: UDP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: UDP
   - ports:
-    - port: "623"
+    - port: 623
       protocol: UDP
   - ports:
-    - port: "5988"
+    - port: 5988
       protocol: TCP
   - ports:
-    - port: "902"
+    - port: 902
       protocol: TCP
   - ports:
-    - port: "8000"
+    - port: 8000
       protocol: TCP
   - ports:
-    - port: "53"
+    - port: 53
       protocol: TCP
   - ports:
-    - port: "636"
+    - port: 636
       protocol: TCP
   - ports:
-    - port: "1521"
+    - port: 1521
       protocol: TCP
   - ports:
-    - port: "88"
+    - port: 88
       protocol: TCP
   - ports:
-    - port: "135"
+    - port: 135
       protocol: ""
   - ports:
-    - port: "7500"
+    - port: 7500
       protocol: TCP
-    - port: "8005"
+    - port: 8005
       protocol: TCP
-    - port: "8006"
+    - port: 8006
       protocol: TCP
-    - port: "8083"
+    - port: 8083
       protocol: TCP
-    - port: "8085"
+    - port: 8085
       protocol: TCP
-    - port: "8086"
+    - port: 8086
       protocol: TCP
-    - port: "8087"
+    - port: 8087
       protocol: TCP
-    - port: "8443"
+    - port: 8443
       protocol: TCP
-    - port: "10109"
+    - port: 10109
       protocol: TCP
-    - port: "10111"
+    - port: 10111
       protocol: TCP
-    - port: "60099"
-      protocol: TCP
-  - ports:
-    - port: "8080"
+    - port: 60099
       protocol: TCP
   - ports:
-    - port: "5989"
+    - port: 8080
       protocol: TCP
   - ports:
-    - port: "903"
+    - port: 5989
       protocol: TCP
   - ports:
-    - port: "25"
+    - port: 903
+      protocol: TCP
+  - ports:
+    - port: 25
       protocol: TCP
 
 ---
@@ -8210,16 +8210,16 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "1199"
+    - port: 1199
       protocol: TCP
   - ports:
-    - port: "61616"
+    - port: 61616
       protocol: TCP
 
 ---
@@ -8236,16 +8236,16 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
   - ports:
-    - port: "22"
+    - port: 22
       protocol: TCP
   - ports:
-    - port: "80"
+    - port: 80
       protocol: TCP
   - ports:
-    - port: "1194"
+    - port: 1194
       protocol: TCP
 
 ---
@@ -8262,12 +8262,12 @@ spec:
   - Ingress
   ingress:
   - ports:
-    - port: "5480"
+    - port: 5480
       protocol: TCP
   - ports:
-    - port: "22"
+    - port: 22
       protocol: TCP
   - ports:
-    - port: "443"
+    - port: 443
       protocol: TCP
 
